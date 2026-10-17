@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hotel Atomia: an atomic orbitals storyboard</title>
+<style>
+:root{--bg:#fff7e6;--ink:#1d1b3a;--pad:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15132e;--ink:#fff3d6}}
+:root[data-theme="dark"]{--bg:#15132e;--ink:#fff3d6}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Trebuchet MS","Segoe UI",system-ui,sans-serif;line-height:1.5}
+header{text-align:center;padding:36px 16px 12px}
+h1{font-family:"Bradley Hand","Comic Sans MS","Chalkboard SE",cursive;font-size:clamp(34px,7vw,64px);margin:0;letter-spacing:1px}
+header p{max-width:620px;margin:8px auto;font-size:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:22px;max-width:1100px;margin:20px auto;padding:0 16px}
+.p{border:4px solid #1d1b3a;border-radius:14px;padding:16px;color:#1d1b3a;box-shadow:6px 6px 0 #1d1b3a;position:relative}
+.p h2{font-family:"Bradley Hand","Comic Sans MS",cursive;margin:0 0 6px;font-size:25px}
+.p .n{position:absolute;top:-14px;left:-10px;background:#1d1b3a;color:#ffd23f;border-radius:50%;width:34px;height:34px;display:grid;place-items:center;font-weight:700}
+.say{background:#fff;border:3px solid #1d1b3a;border-radius:18px;padding:8px 12px;margin:8px 0;font-size:15px}
+.wide{grid-column:1/-1}
+svg{width:100%;height:auto;display:block}
+.row{display:flex;align-items:center;gap:6px;margin:5px 0;flex-wrap:wrap}
+.lab{min-width:46px;font-weight:700}
+.bx{width:38px;height:38px;border:3px solid #1d1b3a;border-radius:7px;background:#fff;display:grid;place-items:center;font-size:20px;font-weight:700}
+.bx.u{color:#e63946}.bx.d{color:#118ab2}
+.cap{font-size:12px;text-align:center;width:38px;margin-top:-3px}
+.cfg{font-family:Georgia,serif;font-size:18px;background:#fff;border:3px dashed #1d1b3a;border-radius:10px;padding:6px 10px;margin:6px 0}
+.tag{display:inline-block;background:#1d1b3a;color:#ffd23f;border-radius:20px;padding:2px 10px;font-size:13px;margin:2px}
+table{border-collapse:collapse;width:100%;background:#fff}td,th{border:2px solid #1d1b3a;padding:4px 8px;text-align:center}th{background:#ff8c42}
+.by{display:inline-block;background:#ef476f;color:#fff!important;border:3px solid #1d1b3a;border-radius:30px;padding:4px 18px;font-weight:700;box-shadow:3px 3px 0 #1d1b3a;font-size:18px!important}
+h2.sec{font-family:"Bradley Hand","Comic Sans MS",cursive;text-align:center;font-size:clamp(26px,5vw,40px);max-width:1100px;margin:34px auto 0;padding:0 16px}
+.p ul,.p ol{margin:6px 0;padding-left:22px;font-size:15px}.p li{margin:3px 0}
+details{background:#fff;border:3px solid #1d1b3a;border-radius:10px;padding:6px 10px;margin:6px 0;font-size:15px}summary{cursor:pointer;font-weight:700}summary:focus-visible{outline:3px solid #ef476f}
+footer{text-align:center;padding:10px 16px 40px;font-size:18px}
+</style></head><body>
+<header><h1>Hotel Atomia</h1><p>Where electrons check in. Follow one night at the hotel to learn how shells, orbitals, Hund’s rule and the Pauli principle decide who sleeps where.</p><p class="by">✏️ Board designed by Teacher Aasia Khawar</p></header>
+<main class="grid">
+
+<section class="p" style="background:#ffd23f"><span class="n">1</span><h2>The hotel has floors</h2>
+<svg viewBox="0 0 400 230" role="img" aria-label="Four floors with capacity 2, 8, 18, 32">
+<rect x="20" y="10" width="360" height="210" fill="#fff" stroke="#1d1b3a" stroke-width="4"/>
+<rect x="20" y="10" width="360" height="52" fill="#ef476f"/><rect x="20" y="62" width="360" height="52" fill="#ff8c42"/><rect x="20" y="114" width="360" height="52" fill="#06d6a0"/><rect x="20" y="166" width="360" height="54" fill="#118ab2"/>
+<g font-size="18" font-weight="700" fill="#1d1b3a"><text x="34" y="42">Floor 4: up to 32 electrons</text><text x="34" y="94">Floor 3: up to 18</text><text x="34" y="146">Floor 2: up to 8</text><text x="34" y="198">Floor 1: up to 2 (lowest energy)</text></g>
+<circle cx="350" cy="193" r="9" fill="#ffd23f" stroke="#1d1b3a" stroke-width="3"/></svg>
+<div class="say"><b>Quantum shells</b> are fixed energy levels. Ground floor is closest to the nucleus and cheapest in energy, so guests fill it first.</div></section>
+
+<section class="p" style="background:#a0e7e5"><span class="n">2</span><h2>Each floor has room types</h2>
+<div class="row"><span class="lab">Floor 1</span><span class="tag">1s</span></div>
+<div class="row"><span class="lab">Floor 2</span><span class="tag">2s</span><span class="tag">2p</span></div>
+<div class="row"><span class="lab">Floor 3</span><span class="tag">3s</span><span class="tag">3p</span><span class="tag">3d</span></div>
+<div class="row"><span class="lab">Floor 4</span><span class="tag">4s</span><span class="tag">4p</span><span class="tag">4d</span><span class="tag">4f</span></div>
+<div class="say">Sub-shells have slightly different energy: s &lt; p &lt; d &lt; f on the same floor. Sub-shells are the room types, and orbitals are the individual rooms.</div>
+<div class="say"><b>Orbital:</b> a region of the atom that holds up to <b>two electrons with opposite spins</b>.</div></section>
+
+<section class="p wide" style="background:#ffc8dd"><span class="n">3</span><h2>Room shapes</h2>
+<svg viewBox="0 0 760 210" role="img" aria-label="s sphere, three p dumbbells, d clover">
+<defs><radialGradient id="g" cx=".35" cy=".35"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#9b5de5"/></radialGradient></defs>
+<circle cx="80" cy="95" r="48" fill="url(#g)" stroke="#1d1b3a" stroke-width="3"/><circle cx="80" cy="95" r="4" fill="#1d1b3a"/>
+<text x="80" y="175" text-anchor="middle" font-size="16" font-weight="700">s: a sphere</text><text x="80" y="195" text-anchor="middle" font-size="13">2s is the same shape, just larger</text>
+<g fill="#00bbf9" stroke="#1d1b3a" stroke-width="3"><ellipse cx="205" cy="95" rx="40" ry="16"/><ellipse cx="325" cy="95" rx="16" ry="40" /><ellipse cx="305" cy="95" rx="0" ry="0"/></g>
+<g fill="#f15bb5" stroke="#1d1b3a" stroke-width="3"><ellipse cx="445" cy="55" rx="16" ry="30"/><ellipse cx="445" cy="135" rx="16" ry="30"/></g>
+<g font-size="14" font-weight="700" text-anchor="middle"><text x="205" y="135">p<tspan font-size="10" dy="3">x</tspan></text><text x="325" y="150">p<tspan font-size="10" dy="3">y</tspan></text><text x="445" y="185">p<tspan font-size="10" dy="3">z</tspan></text></g>
+<text x="325" y="20" text-anchor="middle" font-size="16" font-weight="700">p: three dumbbells at right angles</text>
+<g transform="translate(620 95)" stroke="#1d1b3a" stroke-width="3"><ellipse rx="18" ry="40" fill="#ffd23f" transform="rotate(45)"/><ellipse rx="18" ry="40" fill="#06d6a0" transform="rotate(-45)"/><ellipse rx="18" ry="40" fill="#ff8c42" transform="rotate(45)" opacity=".0"/></g>
+<text x="620" y="165" text-anchor="middle" font-size="16" font-weight="700">d: five clover rooms</text><text x="620" y="185" text-anchor="middle" font-size="13">(shapes not needed for IAS/IAL)</text></svg>
+<div class="say">Rooms are drawn so there is a <b>90% chance</b> of finding the electron inside. The three p rooms differ only in orientation.</div></section>
+
+<section class="p" style="background:#c7f9cc"><span class="n">4</span><h2>How many guests fit?</h2>
+<table><tr><th>Sub-shell</th><th>Rooms × 2</th></tr><tr><td>s</td><td>1 × 2 = <b>2</b></td></tr><tr><td>p</td><td>3 × 2 = <b>6</b></td></tr><tr><td>d</td><td>5 × 2 = <b>10</b></td></tr><tr><td>f</td><td>7 × 2 = <b>14</b></td></tr></table>
+<div class="say">Add the sub-shells and you get the floor totals: 2, 8 (2+6), 18 (2+6+10), 32 (2+6+10+14).</div></section>
+
+<section class="p" style="background:#bde0fe"><span class="n">5</span><h2>Hund’s rule: bus-seat manners</h2>
+<div class="say">“Nobody shares a room until every room on the floor has one guest.”</div>
+<div id="hund"></div>
+<div class="cfg">C: 1s<sup>2</sup>2s<sup>2</sup>2p<sub>x</sub><sup>1</sup>2p<sub>y</sub><sup>1</sup></div>
+<div class="say">Orbitals in a sub-shell each take a single electron before any pair up.</div></section>
+
+<section class="p" style="background:#ffd6a5"><span class="n">6</span><h2>Pauli: sharing needs opposite spins</h2>
+<div id="pauli"></div>
+<div class="say">Two electrons in one room must spin opposite ways, shown as <span style="color:#e63946">↑</span> and <span style="color:#118ab2">↓</span>. Oxygen has 2 paired rooms plus 2 single guests in 2p, fluorine has one single, and neon is full.</div></section>
+
+<section class="p wide" style="background:#e4c1f9"><span class="n">7</span><h2>Plot twist: the 4s room opens first</h2>
+<div class="row"><div class="cfg">K: 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>6</sup><b>4s<sup>1</sup></b> <small>(not 3d<sup>1</sup>)</small></div><div class="cfg">Ca: …3p<sup>6</sup><b>4s<sup>2</sup></b></div></div>
+<div class="say">For K and Ca the 4s room has lower energy than 3d, so it fills first. From Sc onward 3d fills, and when these atoms ionise, the 4s electrons leave first.</div>
+<div class="row"><div class="cfg">Cr: …3d<sup>5</sup>4s<sup>1</sup> <small>(not 3d<sup>4</sup>4s<sup>2</sup>)</small></div><div class="cfg">Cu: …3d<sup>10</sup>4s<sup>1</sup> <small>(not 3d<sup>9</sup>4s<sup>2</sup>)</small></div></div>
+<div class="say"><b>Aufbau</b> (fill lowest energy first) works for the first 36 elements except Cr and Cu. It describes the pattern but does not explain the exceptions.</div></section>
+
+<section class="p wide" style="background:#ffd23f"><span class="n">8</span><h2>Your turn: check in sulfur, phosphorus, chromium</h2>
+<div class="grid" style="padding:0;margin:0;gap:12px">
+<div><b>Sulfur (16)</b><div class="cfg">1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>4</sup></div><div id="s"></div></div>
+<div><b>Phosphorus (15)</b><div class="cfg">1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>3</sup></div><div id="ph"></div></div>
+<div><b>Chromium (24)</b><div class="cfg">1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>6</sup>3d<sup>5</sup>4s<sup>1</sup></div><div id="cr"></div></div></div></section>
+</main>
+<h2 class="sec">Practice zone: lock in every concept</h2>
+<main class="grid">
+
+<section class="p" style="background:#c7f9cc"><h2>A. Quick-fire questions</h2><p style="margin:0;font-size:14px">Tap each question to reveal the answer.</p>
+<details><summary>1. How many electrons can one orbital hold?</summary>Two, with opposite spins.</details>
+<details><summary>2. How many orbitals are in an s, p and d sub-shell?</summary>1, 3 and 5.</details>
+<details><summary>3. How many electrons fit in the third quantum shell?</summary>18 (2 + 6 + 10).</details>
+<details><summary>4. Which has slightly higher energy, 2s or 2p?</summary>2p.</details>
+<details><summary>5. Why is helium 1s<sup>2</sup> and not 1s<sup>1</sup>2s<sup>1</sup>?</summary>The 1s orbital can take two electrons and has lower energy than 2s, so it fills first.</details>
+<details><summary>6. State Hund’s rule.</summary>Electrons occupy orbitals singly before pairing takes place.</details>
+<details><summary>7. State the Pauli exclusion principle.</summary>Two electrons cannot occupy the same orbital unless they have opposite spins.</details>
+<details><summary>8. Give the configuration of calcium.</summary>1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>6</sup>4s<sup>2</sup>. The 4s orbital is lower in energy than 3d here.</details>
+<details><summary>9. When scandium ionises, which electrons go first?</summary>The 4s electrons, which have the greater energy.</details>
+<details><summary>10. Which two elements among the first 36 break the usual filling pattern?</summary>Chromium (3d<sup>5</sup>4s<sup>1</sup>) and copper (3d<sup>10</sup>4s<sup>1</sup>).</details></section>
+
+<section class="p" style="background:#bde0fe"><h2>B. Draw the boxes</h2><p style="margin:0;font-size:14px">Draw electron-in-boxes diagrams for the outer sub-shells of:</p>
+<ul><li>Lithium (3)</li><li>Nitrogen (7)</li><li>Fluorine (9)</li><li>Argon (18)</li><li>Manganese (25)</li><li>Iron (26)</li></ul>
+<details><summary>Check your answers</summary><ul><li><b>Li:</b> 1s ↑↓, 2s ↑</li><li><b>N:</b> 1s ↑↓, 2s ↑↓, 2p ↑ ↑ ↑</li><li><b>F:</b> 2p ↑↓ ↑↓ ↑</li><li><b>Ar:</b> 3s ↑↓, 3p ↑↓ ↑↓ ↑↓</li><li><b>Mn:</b> 3d ↑ ↑ ↑ ↑ ↑ (all single), 4s ↑↓</li><li><b>Fe:</b> 3d ↑↓ ↑ ↑ ↑ ↑ (one pair, four single), 4s ↑↓</li></ul></details>
+<div class="say"><b>Level up:</b> use table B to write the s, p, d notation first, then convert it to boxes.</div></section>
+
+<section class="p" style="background:#ffc8dd"><h2>C. Spot the mistake</h2><p style="margin:0;font-size:14px">Each “check-in” breaks a rule. Which one, and what is the fix?</p>
+<ol><li>Carbon: 2p boxes drawn ↑↓, empty, empty</li><li>Oxygen: one 2p box drawn ↑↑</li><li>Potassium: 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>6</sup>3d<sup>1</sup></li><li>Copper: …3d<sup>9</sup>4s<sup>2</sup></li><li>Helium: 1s<sup>1</sup>2s<sup>1</sup></li><li>Calcium: …3p<sup>6</sup>3d<sup>2</sup></li></ol>
+<details><summary>Reveal the fixes</summary><ol><li>Breaks Hund’s rule. Use 2p<sub>x</sub><sup>1</sup>2p<sub>y</sub><sup>1</sup>.</li><li>Breaks Pauli. Two ↑ cannot share a box, so one must be ↓.</li><li>4s fills before 3d. Correct: …3p<sup>6</sup>4s<sup>1</sup>.</li><li>Exception. Correct: …3d<sup>10</sup>4s<sup>1</sup>.</li><li>Lowest energy first. Correct: 1s<sup>2</sup>.</li><li>Correct: …3p<sup>6</sup>4s<sup>2</sup>.</li></ol></details></section>
+
+<section class="p" style="background:#ffd6a5"><h2>D. Checkpoint 1 rehearsal</h2><p style="margin:0;font-size:14px">Based on the textbook checkpoint:</p>
+<ol><li>Explain Hund’s rule and the Pauli exclusion principle in your own words.</li><li>In a box diagram, what do the arrows mean, and what do x, y and z mean?</li><li>Why is the 2p<sub>y</sub> electron not in the 2p<sub>x</sub> orbital?</li><li>Describe the shapes of s and p orbitals.</li><li>Draw the box configuration of sulfur, phosphorus and chromium.</li></ol>
+<details><summary>Model answers</summary><ol><li>Hund: orbitals in a sub-shell fill singly first. Pauli: two electrons share an orbital only with opposite spins.</li><li>Arrows are electrons and their spin direction. x, y and z are the axes that show each p orbital’s orientation.</li><li>2p<sub>x</sub> already holds one electron, and Hund’s rule says each orbital takes one before pairing.</li><li>s is spherical. p is an elongated dumbbell, three at right angles.</li><li>See panel 8 on the board above.</li></ol></details></section>
+
+<section class="p wide" style="background:#e4c1f9"><h2>E. Hands-on classroom games</h2>
+<ol>
+<li><b>Human hotel:</b> chalk floors and rooms on the floor. Students are electrons holding ↑ or ↓ cards and “check in” element by element, from H to Kr. The class calls out any rule that is broken.</li>
+<li><b>Bus-seat challenge:</b> set out pairs of chairs as p orbitals. Students board as N, then O, and see why singles come first, then pairs.</li>
+<li><b>Egg-carton orbitals:</b> each cup is an orbital and two beads in red and blue are the spins. Build 2p, 3d and 4s for Fe, Cr and Cu.</li>
+<li><b>Balloon p orbitals:</b> twist long balloons into dumbbells and tie three together at right angles to model p<sub>x</sub>, p<sub>y</sub> and p<sub>z</sub>.</li>
+<li><b>Clay shapes:</b> mould a 1s sphere and a bigger 2s sphere, then three p dumbbells in different colours.</li>
+<li><b>Configuration bingo:</b> call the element, and students mark its configuration on a card of notations.</li>
+<li><b>Mistake hunt relay:</b> teams run to the board, find the wrong configuration and fix it. Score a point for naming the rule broken.</li>
+<li><b>Card sort:</b> match element, atomic number, s,p,d notation and box diagram cards for the first 36 elements.</li>
+<li><b>Ionisation role-play:</b> a student acting as Sc removes the 4s “guests” first, to show which electrons leave.</li>
+<li><b>Draw a comic:</b> students create their own 4-panel story for one rule, like Hund’s rule on a bus, and swap with a partner.</li>
+<li><b>Periodic table colouring:</b> colour s, p and d blocks and link each block to the sub-shell being filled.</li>
+<li><b>Exit ticket:</b> on a sticky note, write the config of one element chosen at random from H to Kr and add the rule you used.</li>
+</ol>
+<div class="say"><b>Differentiation:</b> start with H to Ne (boxes only), move on to Na to Ar, then challenge with K to Kr including the exceptions Cr and Cu.</div></section>
+</main>
+<footer>Board designed by Teacher Aasia Khawar<br>Every element’s chemistry comes from where its electrons sit. Learn the hotel rules and the periodic table starts to make sense.</footer>
+<script>
+function row(label,pairs,caps){var h='<div class="row"><span class="lab">'+label+'</span>';pairs.forEach(function(p){h+='<div><div class="bx">'+(p[0]?'<span class="u">↑</span>':'')+(p[1]?'<span class="d">↓</span>':'')+'</div></div>'});return h+'</div>'}
+function labels(a){return '<div class="row"><span class="lab"></span>'+a.map(function(x){return '<div class="cap">'+x+'</div>'}).join('')+'</div>'}
+var F=[1,1],H=[1,0],E=[0,0],N=[1,1];
+document.getElementById('hund').innerHTML=labels(['1s','2s','2px','2py','2pz'])+row('B',[F,F,H,E,E])+row('C',[F,F,H,H,E])+row('N',[F,F,H,H,H]);
+document.getElementById('pauli').innerHTML=labels(['1s','2s','2px','2py','2pz'])+row('O',[F,F,F,H,H])+row('F',[F,F,F,F,H])+row('Ne',[F,F,F,F,F]);
+document.getElementById('s').innerHTML=labels(['3s','3px','3py','3pz'])+row('',[F,F,H,H]);
+document.getElementById('ph').innerHTML=labels(['3s','3px','3py','3pz'])+row('',[F,H,H,H]);
+document.getElementById('cr').innerHTML=labels(['4s','3d','3d','3d','3d','3d'])+row('',[H,H,H,H,H,H]);
+</script></body></html>
